@@ -1,0 +1,75 @@
+html {
+  height: 100vh;
+  min-width: 100vw;
+}
+
+body {
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 2vw;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+}
+
+.container {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+}
+
+h1 {
+  font-weight: "bold";
+  text-align: center;
+  z-index: 2;
+  font-size: 3rem;
+  position: relative;
+  color: rgba(20, 20, 20, 0.7);
+  text-shadow: 1px 0px 1px #cccccc, 0px 1px 1px #eeeeee, 2px 1px 1px #cccccc,
+    1px 2px 1px #eeeeee, 3px 2px 1px #cccccc, 2px 3px 1px #eeeeee,
+    4px 3px 1px #cccccc, 3px 4px 1px #eeeeee, 5px 4px 1px #cccccc,
+    4px 5px 1px #eeeeee, 6px 5px 1px #cccccc, 5px 6px 1px #eeeeee,
+    7px 6px 1px #cccccc;
+}
+
+h2 {
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.background-img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  opacity: 0.4;
+}
+
+.counter {
+  background-color: rgba(255, 255, 255, 0.5);
+  z-index: 2;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+}
+
+button {
+  width: 12rem;
+  height: 4rem;
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 2rem;
+  background-color: rgba(50, 150, 50, 0.6);
+  cursor: pointer;
+  z-index: 3;
+  border: solid 0.1rem rgba(0, 0, 0, 0.3);
+  border-radius: 1rem;
+}
+
+#count {
+  z-index: 3;
+  font-size: 5rem;
+  font-weight: bold;
+}
