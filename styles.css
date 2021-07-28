@@ -13,9 +13,11 @@ body {
 
 .container {
   position: relative;
-  overflow: hidden;
   width: 100%;
-  height: 100%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
 
 h1 {
@@ -38,17 +40,22 @@ h2 {
 }
 
 .background-img {
-  position: absolute;
-  left: 0;
-  top: 0;
+  min-height: 100%;
+  min-width: 1024px;
+
+  /* Set up proportionate scaling */
   width: 100%;
-  height: 100%;
+  height: auto;
+
+  /* Set up positioning */
+  position: fixed;
+  top: 0;
+  left: 0;
   z-index: 1;
   opacity: 0.4;
 }
 
 .counter {
-  background-color: rgba(255, 255, 255, 0.5);
   z-index: 2;
   display: flex;
   justify-content: space-around;
@@ -56,7 +63,7 @@ h2 {
   flex-direction: column;
 }
 
-button {
+#count-button {
   width: 12rem;
   height: 4rem;
   color: rgba(255, 255, 255, 0.9);
@@ -72,4 +79,43 @@ button {
   z-index: 3;
   font-size: 5rem;
   font-weight: bold;
+}
+
+#submit {
+  width: 8rem;
+  height: 2rem;
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 1rem;
+  background-color: rgba(50, 50, 50, 0.6);
+  cursor: pointer;
+  z-index: 3;
+  border: solid 0.1rem rgba(0, 0, 0, 0.3);
+  border-radius: 1rem;
+  margin-top: 1rem;
+}
+
+.score-board {
+  border-spacing: 0px;
+  background: rgba(255, 255, 255, 0.8);
+  box-shadow: 0 1px 0 0 rgba(22, 29, 37, 0.05);
+  border-collapse: collapse;
+  margin-top: 2rem;
+  z-index: 2;
+  margin-bottom: 1rem;
+  display: none;
+}
+
+td {
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  padding: 0.8rem;
+  text-align: left;
+  font-size: 1.2rem;
+}
+
+td[class="header"],
+th {
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  padding: 0.8rem;
+  text-align: left;
+  font-size: 1.5rem;
 }
